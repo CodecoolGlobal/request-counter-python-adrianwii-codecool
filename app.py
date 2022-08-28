@@ -9,7 +9,7 @@ def main():
     return render_template('main.html')
 
 
-@app.route('/request-counter', methods=['GET', 'POST'])
+@app.route('/request-counter', methods=['GET', 'POST', 'DELETE'])
 def request_counter():
     dictionary_key = request.method
     statistics_data = data_handler.read_request_counts()

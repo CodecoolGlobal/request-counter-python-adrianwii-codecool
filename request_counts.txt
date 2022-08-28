@@ -1,2 +1,3 @@
-GET: 21
+GET: 36
 POST: 8
+DELETE: 12

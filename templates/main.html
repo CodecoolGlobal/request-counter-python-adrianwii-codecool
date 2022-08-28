@@ -20,8 +20,22 @@
     <input type="submit" value="SEND POST REQUEST">
 </form>
 
+<!-- DELETE REQUEST VIA HTML FORM -->
+
+<h2>DELETE</h2>
+<button onclick="send_delete_request()">SEND DELETE REQUEST</button>
+
 
 <!-- LINK TO STATS-->
 <a href="/statistics">GO TO STATISTICS</a>
+
+
+<script>
+    function send_delete_request() {
+        fetch('/request-counter', {
+            method: "DELETE"
+        });
+    }
+</script>
 </body>
 </html>
