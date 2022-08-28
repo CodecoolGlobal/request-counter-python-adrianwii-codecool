@@ -15,5 +15,14 @@ def request_counter():
     return render_template('main.html')
 
 
+@app.route('/statistics')
+def statistics():
+    statistics_data = {
+        'GET': 100,
+        'POST': 67
+    }
+    return render_template('statistics.html', data=statistics_data)
+
+
 if __name__ == '__main__':
     app.run()
