@@ -9,15 +9,17 @@
 <h1>STATISTICS</h1>
 
 <table>
-  <tr>
-    <td> GET: </td> <td> {{ data['GET'] }}</td>
-  </tr>
-  <tr>
-    <td> POST: </td> <td> {{ data['POST'] }}</td>
-  </tr>
-  <tr>
-    <td> DELETE: </td> <td> {{ data['DELETE'] }}</td>
-  </tr>
+  {% for key in data %}
+      <tr>
+        <td>
+          <h3>{{ key }}: </h3>
+        </td>
+        <td>
+          <h3>{{ data[key] }}</h3>
+        </td>
+      </tr>
+  {% endfor %}
+
 </table>
 
 <hr>
